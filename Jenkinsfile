@@ -30,10 +30,7 @@ node {
               
         
         }
-    stage('Build Project') {
-      // build project via maven
-      sh "mvn clean install"
-    }
+   
 		
     stage('Build Docker Image with new code') {
       // build docker image
