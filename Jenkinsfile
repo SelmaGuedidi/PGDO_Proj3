@@ -25,10 +25,10 @@ node {
       mvnHome = tool 'maven-3.5.2'
     }    
   stage('Debug') {
-            steps {
+          
                 sh 'echo $JAVA_HOME'
-                sh 'echo $PATH'
-            }
+              
+        
         }
     stage('Build Project') {
       // build project via maven
