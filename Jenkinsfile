@@ -1,6 +1,6 @@
 node {
 	environment {
-    JAVA_HOME = $(/usr/libexec/java_home -v 17)
+    JAVA_HOME = '/usr/libexec/java_home'
 }
     def application = "devopsexample"
     
