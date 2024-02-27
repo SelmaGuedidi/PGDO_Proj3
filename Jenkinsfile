@@ -1,6 +1,6 @@
 node {
 	environment {
-    JAVA_HOME = '/usr/libexec/java_home'
+    JAVA_HOME = $(/usr/libexec/java_home -v 17)
 }
     def application = "devopsexample"
     
@@ -24,7 +24,12 @@ node {
       // **       in the global configuration.           
       mvnHome = tool 'maven-3.5.2'
     }    
-  
+  stage('Debug') {
+            steps {
+                sh 'echo $JAVA_HOME'
+                sh 'echo $PATH'
+            }
+        }
     stage('Build Project') {
       // build project via maven
       sh "'${mvnHome}/bin/mvn' clean install"
