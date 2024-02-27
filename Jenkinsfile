@@ -26,7 +26,7 @@ node {
     }    
   stage('Debug') {
           
-                sh 'echo $JAVA_HOME'
+                sh 'echo "Debugging information: JAVA_HOME is $JAVA_HOME"'
               
         
         }
