@@ -4,7 +4,7 @@ node {
     
     //Its mandatory to change the Docker Hub Account ID after this Repo is forked by an other person
     def dockerhubaccountid = "selmaguedidi"
-    def JAVA_HOME = $(/usr/libexec/java_home -v 17)
+    def JAVA_HOME = "/usr/libexec/java_home "
     // reference to maven
     // ** NOTE: This 'maven-3.5.2' Maven tool must be configured in the Jenkins Global Configuration.   
     def mvnHome = tool 'maven-3.5.2'
